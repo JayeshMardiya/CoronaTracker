@@ -10,10 +10,14 @@ import UIKit
 
 class VaccineViewController: UIViewController {
 
+    @IBOutlet weak var labelUpdatedOn: UILabel!
+    @IBOutlet weak var labelSource: UILabel!
+    @IBOutlet weak var tvData: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "About Vaccine"
+        self.title = "News about Vaccine"
     }
 }

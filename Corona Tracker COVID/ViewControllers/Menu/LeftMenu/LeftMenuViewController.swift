@@ -8,6 +8,8 @@
 
 import SideMenu
 
+var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
+
 class LeftMenuViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
@@ -21,63 +23,82 @@ class LeftMenuViewController: UIViewController {
 extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return arrayMenuItemTitle.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        cell.textLabel?.textColor = .white
-        cell.textLabel?.text = self.arrayMenuItemTitle[indexPath.row]
-        
-        let view: UIView = UIView(frame: CGRect(x: 0, y: cell.bounds.size.height-1, width: cell.bounds.size.width, height: 1))
-        view.backgroundColor = UIColor.white
-        cell.addSubview(view)
+        let cell: MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as! MenuTableViewCell
+        cell.labelMenuTitle.text = self.arrayMenuItemTitle[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //        self.dismiss(animated: true, completion: nil)
-        
         switch indexPath.row {
         case 0:
             print("0")
-            let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-            if #available(iOS 13.0, *) {
-                let viewController: HomeViewController = mainStoryboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
-                self.navigationController?.pushViewController(viewController, animated: false)
+            if indexPath == selectedIndex {
+                self.dismiss(animated: true, completion: nil)
             } else {
-                // Fallback on earlier versions
-                let viewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController")
-                self.navigationController?.pushViewController(viewController, animated: false)
+                selectedIndex = indexPath
+                let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+                if #available(iOS 13.0, *) {
+                    let viewController: HomeViewController = mainStoryboard.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+                    self.navigationController?.pushViewController(viewController, animated: false)
+                } else {
+                    // Fallback on earlier versions
+                    let viewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController")
+                    self.navigationController?.pushViewController(viewController, animated: false)
+                }
             }
         case 1:
             print("1")
-            let viewController: CaseByCountryViewController = CaseByCountryViewController
-                .storyboardInstance
-                .instantiate()
-            self.navigationController?.pushViewController(viewController, animated: false)
+            if indexPath == selectedIndex {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                selectedIndex = indexPath
+                let viewController: CaseByCountryViewController = CaseByCountryViewController
+                    .storyboardInstance
+                    .instantiate()
+                self.navigationController?.pushViewController(viewController, animated: false)
+            }
         case 2:
             print("2")
-            let viewController: TipsViewController = TipsViewController
-                .storyboardInstance
-                .instantiate()
-            self.navigationController?.pushViewController(viewController, animated: false)
+            if indexPath == selectedIndex {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                selectedIndex = indexPath
+                let viewController: TipsViewController = TipsViewController
+                    .storyboardInstance
+                    .instantiate()
+                self.navigationController?.pushViewController(viewController, animated: false)
+            }
+            
         case 3:
             print("3")
-            let viewController: VaccineViewController = VaccineViewController
-                .storyboardInstance
-                .instantiate()
-            self.navigationController?.pushViewController(viewController, animated: false)
+            if indexPath == selectedIndex {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                selectedIndex = indexPath
+                let viewController: VaccineViewController = VaccineViewController
+                    .storyboardInstance
+                    .instantiate()
+                self.navigationController?.pushViewController(viewController, animated: false)
+            }
+            
         case 4:
             print("4")
-            let viewController: NewsViewController = NewsViewController
-                .storyboardInstance
-                .instantiate()
-            self.navigationController?.pushViewController(viewController, animated: false)
+            if indexPath == selectedIndex {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                selectedIndex = indexPath
+                let viewController: NewsViewController = NewsViewController
+                    .storyboardInstance
+                    .instantiate()
+                self.navigationController?.pushViewController(viewController, animated: false)
+            }
+            
         default:
             print("Default")
         }

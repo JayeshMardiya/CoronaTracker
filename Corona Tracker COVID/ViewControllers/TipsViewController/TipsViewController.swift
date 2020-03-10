@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PDFKit
 
 class TipsViewController: UIViewController {
 
@@ -15,5 +16,21 @@ class TipsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = "Tips"
+        
+        // Add PDFView to view controller.
+        let pdfView = PDFView(frame: self.view.bounds)
+        self.view.addSubview(pdfView)
+
+        // Fit content in PDFView.
+        pdfView.autoScales = true
+        pdfView.sizeToFit()
+        
+        // Load Sample.pdf file.
+        if let fileURL = Bundle.main.path(forResource: "tips", ofType: "pdf") {
+            if let pdfDocument = PDFDocument(url: URL(fileURLWithPath: fileURL)) {
+                pdfView.autoScales = true
+                pdfView.document = pdfDocument
+            }
+        }
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0852A02417A40B00997287 /* tips.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1A08529F2417A40B00997287 /* tips.pdf */; };
+		1A0852A22417A7A800997287 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0852A12417A7A800997287 /* NewsTableViewCell.swift */; };
+		1A0852A42417AA5900997287 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0852A32417AA5900997287 /* MenuTableViewCell.swift */; };
 		1A1E95D6241776F1002306CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E95D5241776F1002306CB /* AppDelegate.swift */; };
 		1A1E95DD241776F1002306CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E95DB241776F1002306CB /* Main.storyboard */; };
 		1A1E95E0241776F1002306CB /* Corona_Tracker_COVID.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E95DE241776F1002306CB /* Corona_Tracker_COVID.xcdatamodeld */; };
@@ -27,13 +30,15 @@
 		1A1E962224177F9C002306CB /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E961C24177F9C002306CB /* Log.swift */; };
 		1A1E962324177F9C002306CB /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E961D24177F9C002306CB /* UIColor+Extensions.swift */; };
 		1A1E962424177F9C002306CB /* UISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E961E24177F9C002306CB /* UISearchBar+Extensions.swift */; };
-		1A1E962524177F9C002306CB /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E961F24177F9C002306CB /* UINavigationController+Extensions.swift */; };
 		1A1E962624177F9C002306CB /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E962024177F9C002306CB /* UIStoryboard+Extensions.swift */; };
 		1A1E962824178F63002306CB /* CasesCountryWiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E962724178F63002306CB /* CasesCountryWiseTableViewCell.swift */; };
 		6F78CED167F31D4A42F1B4D7 /* Pods_Corona_Tracker_COVID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A08529F2417A40B00997287 /* tips.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = tips.pdf; sourceTree = "<group>"; };
+		1A0852A12417A7A800997287 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		1A0852A32417AA5900997287 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		1A1E95D2241776F1002306CB /* Corona Tracker COVID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Tracker COVID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1E95D5241776F1002306CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A1E95DC241776F1002306CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +61,6 @@
 		1A1E961C24177F9C002306CB /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		1A1E961D24177F9C002306CB /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		1A1E961E24177F9C002306CB /* UISearchBar+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extensions.swift"; sourceTree = "<group>"; };
-		1A1E961F24177F9C002306CB /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		1A1E962024177F9C002306CB /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		1A1E962724178F63002306CB /* CasesCountryWiseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesCountryWiseTableViewCell.swift; sourceTree = "<group>"; };
 		AEF05D23946FE3752AE1D9FC /* Pods-Corona Tracker COVID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Tracker COVID.release.xcconfig"; path = "Target Support Files/Pods-Corona Tracker COVID/Pods-Corona Tracker COVID.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0852742417A3FB00997287 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A08529F2417A40B00997287 /* tips.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1A1E95C9241776F1002306CB = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +109,7 @@
 		1A1E95D4241776F1002306CB /* Corona Tracker COVID */ = {
 			isa = PBXGroup;
 			children = (
+				1A0852742417A3FB00997287 /* Resources */,
 				1A1E961924177F93002306CB /* Helper */,
 				1A1E95EC24177BC5002306CB /* ViewControllers */,
 				1A1E95DB241776F1002306CB /* Main.storyboard */,
@@ -141,6 +154,7 @@
 		1A1E95F724177BE4002306CB /* LeftMenu */ = {
 			isa = PBXGroup;
 			children = (
+				1A0852A32417AA5900997287 /* MenuTableViewCell.swift */,
 				1A1E95F924177BE4002306CB /* LeftMenuViewController.swift */,
 				1A1E95F824177BE4002306CB /* LeftMenuViewController.storyboard */,
 			);
@@ -186,6 +200,7 @@
 		1A1E960E24177E0E002306CB /* NewsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1A0852A12417A7A800997287 /* NewsTableViewCell.swift */,
 				1A1E960F24177E1A002306CB /* NewsViewController.swift */,
 				1A1E961124177E21002306CB /* NewsViewController.storyboard */,
 			);
@@ -207,7 +222,6 @@
 				1A1E961C24177F9C002306CB /* Log.swift */,
 				1A1E961D24177F9C002306CB /* UIColor+Extensions.swift */,
 				1A1E961E24177F9C002306CB /* UISearchBar+Extensions.swift */,
-				1A1E961F24177F9C002306CB /* UINavigationController+Extensions.swift */,
 				1A1E962024177F9C002306CB /* UIStoryboard+Extensions.swift */,
 			);
 			path = Extensions;
@@ -298,6 +312,7 @@
 				1A1E95E2241776F5002306CB /* Assets.xcassets in Resources */,
 				1A1E95DD241776F1002306CB /* Main.storyboard in Resources */,
 				1A1E961824177E34002306CB /* CaseByCountryViewController.storyboard in Resources */,
+				1A0852A02417A40B00997287 /* tips.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,9 +365,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A1E962524177F9C002306CB /* UINavigationController+Extensions.swift in Sources */,
 				1A1E960D24177E0A002306CB /* VaccineViewController.swift in Sources */,
 				1A1E95D6241776F1002306CB /* AppDelegate.swift in Sources */,
+				1A0852A22417A7A800997287 /* NewsTableViewCell.swift in Sources */,
 				1A1E962224177F9C002306CB /* Log.swift in Sources */,
 				1A1E962824178F63002306CB /* CasesCountryWiseTableViewCell.swift in Sources */,
 				1A1E962424177F9C002306CB /* UISearchBar+Extensions.swift in Sources */,
@@ -360,6 +375,7 @@
 				1A1E962624177F9C002306CB /* UIStoryboard+Extensions.swift in Sources */,
 				1A1E960A24177DF2002306CB /* TipsViewController.swift in Sources */,
 				1A1E962124177F9C002306CB /* UIViewController+Extensions.swift in Sources */,
+				1A0852A42417AA5900997287 /* MenuTableViewCell.swift in Sources */,
 				1A1E95E0241776F1002306CB /* Corona_Tracker_COVID.xcdatamodeld in Sources */,
 				1A1E960024177BE4002306CB /* LeftMenuViewController.swift in Sources */,
 				1A1E962324177F9C002306CB /* UIColor+Extensions.swift in Sources */,
