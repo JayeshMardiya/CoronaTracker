@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DFb-UJ-gpX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tips View Controller-->
+        <scene sceneID="1ej-qm-Oyf">
+            <objects>
+                <viewController storyboardIdentifier="TipsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DFb-UJ-gpX" customClass="TipsViewController" customModule="Corona_Tracker_COVID" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sZo-zG-EoT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mkK-GY-KZ6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oTc-xp-akg">
+                        <barButtonItem key="backBarButtonItem" title=" " id="St0-LN-VbE"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_menu" id="obP-xF-meB">
+                            <connections>
+                                <segue destination="HPT-2A-LsO" kind="show" id="UnX-SE-M25"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRj-Fl-ETA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="80"/>
+        </scene>
+        <!--LeftMenuViewController-->
+        <scene sceneID="PXb-uc-Usq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LeftMenuViewController" id="HPT-2A-LsO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZSi-tW-SPo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ex-bz-3s7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_menu" width="30" height="30"/>
+    </resources>
+</document>
