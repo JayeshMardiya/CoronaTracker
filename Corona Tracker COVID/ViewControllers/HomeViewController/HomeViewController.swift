@@ -8,6 +8,8 @@
 
 import UIKit
 import SideMenu
+import Firebase
+import MBProgressHUD
 
 class HomeViewController: UIViewController {
 
@@ -15,6 +17,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var labelTotalConfirmed: UILabel!
     @IBOutlet weak var labelTotalDeath: UILabel!
     @IBOutlet weak var labelTotalRecovered: UILabel!
+    
+    
+    var attributes:[Attributes] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +31,36 @@ class HomeViewController: UIViewController {
         
         self.setupSideMenu()
         self.updateMenus()
+        self.getData()
     }
+    
+    func getData() {
+        
+        let progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
+        let db = Firestore.firestore()
+        db.collection("CoronaDetail").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                
+                let dictionaries = querySnapshot?.documents.compactMap({$0.data()}) ?? []
+                
+                for document in dictionaries {
+                    self.attributes.append(Attributes.init(dictionary: document)!)
+                }
+                
+                self.attributes = self.attributes.sorted(by: { $0.confirmed! > $1.confirmed! })
+                self.tableView.reloadData()
+                
+                self.labelTotalConfirmed.text = "\(self.attributes.reduce(0) { $0 + $1.confirmed! })"
+                self.labelTotalDeath.text = "\(self.attributes.reduce(0) { $0 + $1.deaths! })"
+                self.labelTotalRecovered.text = "\(self.attributes.reduce(0) { $0 + $1.recovered! })"
+                
+                progressHUD.hide(animated: true)
+            }
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -86,17 +120,18 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return self.attributes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: CasesCountryWiseTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CasesCountryWiseTableViewCell", for: indexPath) as! CasesCountryWiseTableViewCell
         
-        cell.labelCountryName.text = "-"
-        cell.labelTotalConfirmed.text = "-"
-        cell.labelTotalDeath.text = "-"
-        cell.labelTotalRecovered.text = "-"
+        let attribute = self.attributes[indexPath.row]
+        cell.labelCountryName.text = attribute.countryRegion
+        cell.labelTotalConfirmed.text = "\(String(describing: attribute.confirmed!))"
+        cell.labelTotalDeath.text = "\(String(describing: attribute.deaths!))"
+        cell.labelTotalRecovered.text = "\(String(describing: attribute.recovered!))"
         
         return cell
     }
