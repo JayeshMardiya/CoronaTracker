@@ -282,6 +282,9 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
   - SideMenu (6.4.7)
   - Toaster (2.2.0)
 
@@ -294,6 +297,7 @@ DEPENDENCIES:
   - FirebaseCore
   - FirebaseFirestoreSwift
   - MBProgressHUD (~> 1.2.0)
+  - SDWebImage (~> 5.0)
   - SideMenu
   - Toaster (= 2.2.0)
 
@@ -324,6 +328,7 @@ SPEC REPOS:
     - MBProgressHUD
     - nanopb
     - PromisesObjC
+    - SDWebImage
     - SideMenu
     - Toaster
 
@@ -353,9 +358,10 @@ SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
 
-PODFILE CHECKSUM: 81e298ac10caaff2e8fde465bca87d4152f07807
+PODFILE CHECKSUM: 68f1560a7db6f946479507f14d2472d1b0e4edea
 
 COCOAPODS: 1.8.4

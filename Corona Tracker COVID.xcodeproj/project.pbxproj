@@ -35,6 +35,11 @@
 		6F78CED167F31D4A42F1B4D7 /* Pods_Corona_Tracker_COVID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */; };
 		D8849E4C24179A8F00737863 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8849E4B24179A8F00737863 /* GoogleService-Info.plist */; };
 		D8849E4F24179F1F00737863 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8849E4E24179F1F00737863 /* Attributes.swift */; };
+		D8849E512417CE3600737863 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8849E502417CE3600737863 /* NewsModel.swift */; };
+		D8849E532417D10200737863 /* VaccineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8849E522417D10200737863 /* VaccineModel.swift */; };
+		D8849E562417D36E00737863 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8849E552417D36E00737863 /* WebViewViewController.swift */; };
+		D8849E582417D37D00737863 /* WebViewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8849E572417D37D00737863 /* WebViewViewController.storyboard */; };
+		D8849E5A2417D3C300737863 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8849E592417D3C300737863 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +74,11 @@
 		D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corona_Tracker_COVID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8849E4B24179A8F00737863 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8849E4E24179F1F00737863 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		D8849E502417CE3600737863 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		D8849E522417D10200737863 /* VaccineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineModel.swift; sourceTree = "<group>"; };
+		D8849E552417D36E00737863 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		D8849E572417D37D00737863 /* WebViewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewViewController.storyboard; sourceTree = "<group>"; };
+		D8849E592417D3C300737863 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F5DF9D921214EB633BB08184 /* Pods-Corona Tracker COVID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Tracker COVID.debug.xcconfig"; path = "Target Support Files/Pods-Corona Tracker COVID/Pods-Corona Tracker COVID.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8849E5A2417D3C300737863 /* WebKit.framework in Frameworks */,
 				6F78CED167F31D4A42F1B4D7 /* Pods_Corona_Tracker_COVID.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +217,7 @@
 		1A1E960E24177E0E002306CB /* NewsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D8849E542417D35000737863 /* WebView */,
 				1A0852A12417A7A800997287 /* NewsTableViewCell.swift */,
 				1A1E960F24177E1A002306CB /* NewsViewController.swift */,
 				1A1E961124177E21002306CB /* NewsViewController.storyboard */,
@@ -236,6 +248,7 @@
 		40AF5BCCFCD5E8631AFB5B17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8849E592417D3C300737863 /* WebKit.framework */,
 				D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */,
 			);
 			name = Frameworks;
@@ -254,8 +267,19 @@
 			isa = PBXGroup;
 			children = (
 				D8849E4E24179F1F00737863 /* Attributes.swift */,
+				D8849E502417CE3600737863 /* NewsModel.swift */,
+				D8849E522417D10200737863 /* VaccineModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D8849E542417D35000737863 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				D8849E552417D36E00737863 /* WebViewViewController.swift */,
+				D8849E572417D37D00737863 /* WebViewViewController.storyboard */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +349,7 @@
 				1A1E95E5241776F5002306CB /* LaunchScreen.storyboard in Resources */,
 				1A1E95FF24177BE4002306CB /* LeftMenuViewController.storyboard in Resources */,
 				1A1E95E2241776F5002306CB /* Assets.xcassets in Resources */,
+				D8849E582417D37D00737863 /* WebViewViewController.storyboard in Resources */,
 				1A1E95DD241776F1002306CB /* Main.storyboard in Resources */,
 				1A1E961824177E34002306CB /* CaseByCountryViewController.storyboard in Resources */,
 				1A0852A02417A40B00997287 /* tips.pdf in Resources */,
@@ -390,11 +415,14 @@
 				1A1E960724177DE3002306CB /* CaseByCountryViewController.swift in Sources */,
 				1A1E962624177F9C002306CB /* UIStoryboard+Extensions.swift in Sources */,
 				1A1E960A24177DF2002306CB /* TipsViewController.swift in Sources */,
+				D8849E562417D36E00737863 /* WebViewViewController.swift in Sources */,
 				1A1E962124177F9C002306CB /* UIViewController+Extensions.swift in Sources */,
 				1A0852A42417AA5900997287 /* MenuTableViewCell.swift in Sources */,
+				D8849E512417CE3600737863 /* NewsModel.swift in Sources */,
 				1A1E95E0241776F1002306CB /* Corona_Tracker_COVID.xcdatamodeld in Sources */,
 				1A1E960024177BE4002306CB /* LeftMenuViewController.swift in Sources */,
 				1A1E962324177F9C002306CB /* UIColor+Extensions.swift in Sources */,
+				D8849E532417D10200737863 /* VaccineModel.swift in Sources */,
 				1A1E960424177DCD002306CB /* HomeViewController.swift in Sources */,
 				1A1E961024177E1A002306CB /* NewsViewController.swift in Sources */,
 			);
