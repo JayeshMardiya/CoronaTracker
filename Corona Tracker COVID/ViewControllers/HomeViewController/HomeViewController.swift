@@ -18,20 +18,39 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var labelTotalDeath: UILabel!
     @IBOutlet weak var labelTotalRecovered: UILabel!
     
-    
     var attributes:[Attributes] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.labelTotalConfirmed.text = "-"
-        self.labelTotalDeath.text = "-"
-        self.labelTotalRecovered.text = "-"
         
         self.setupSideMenu()
         self.updateMenus()
+        
+        if let attributes = self.getSavedData(for: "Attributes") {
+            self.attributes = attributes
+        }else {
+            self.getData()
+        }
+    }
+    
+    @IBAction func refreshButtonTapped(_ sender: UIBarButtonItem) {
         self.getData()
+    }
+    
+    func saveData(for key: String, and data: [Attributes]) {
+        
+        let placesData = try! JSONEncoder().encode(data)
+        UserDefaults.standard.set(placesData, forKey: key)
+    }
+    
+    // Get EVObject from PrefManager
+    func getSavedData(for key: String) -> [Attributes]? {
+        if let placeData = UserDefaults.standard.data(forKey: key) {
+            let placeArray = try! JSONDecoder().decode([Attributes].self, from: placeData)
+            return placeArray
+        }else {
+            return nil
+        }
     }
     
     func getData() {
@@ -42,7 +61,7 @@ class HomeViewController: UIViewController {
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                
+                self.attributes.removeAll()
                 let dictionaries = querySnapshot?.documents.compactMap({$0.data()}) ?? []
                 
                 for document in dictionaries {
@@ -56,6 +75,7 @@ class HomeViewController: UIViewController {
                 self.labelTotalDeath.text = "\(self.attributes.reduce(0) { $0 + $1.deaths! })"
                 self.labelTotalRecovered.text = "\(self.attributes.reduce(0) { $0 + $1.recovered! })"
                 
+                self.saveData(for: "Attributes", and: self.attributes)
                 progressHUD.hide(animated: true)
             }
         }
