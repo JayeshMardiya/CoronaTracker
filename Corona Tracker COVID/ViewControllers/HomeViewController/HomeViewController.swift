@@ -28,6 +28,11 @@ class HomeViewController: UIViewController {
         
         if let attributes = self.getSavedData(for: "Attributes") {
             self.attributes = attributes
+            
+            self.labelTotalConfirmed.text = "\(self.attributes.reduce(0) { $0 + $1.confirmed! })"
+            self.labelTotalDeath.text = "\(self.attributes.reduce(0) { $0 + $1.deaths! })"
+            self.labelTotalRecovered.text = "\(self.attributes.reduce(0) { $0 + $1.recovered! })"
+            
         }else {
             self.getData()
         }

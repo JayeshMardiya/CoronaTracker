@@ -16,6 +16,7 @@ target 'Corona Tracker COVID' do
   pod 'Firebase/Analytics'
   pod 'Toaster',            '2.2.0'
   pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'SDWebImage', '~> 5.0'
   
   # Fabric Crashlytics
   pod 'Fabric'
