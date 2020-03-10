@@ -240,7 +240,11 @@
                                 <segue destination="H3W-M7-dro" kind="show" identifier="LeftMenuNavigationController" id="Zt9-Tc-NI2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="0ZH-Yq-5Sw"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="0ZH-Yq-5Sw">
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="BYZ-38-t0r" id="nhG-uL-BOb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="labelTotalConfirmed" destination="nGo-S8-Ypu" id="P0R-O8-Fpj"/>
