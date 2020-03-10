@@ -32,6 +32,10 @@
 		1A1E962424177F9C002306CB /* UISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E961E24177F9C002306CB /* UISearchBar+Extensions.swift */; };
 		1A1E962624177F9C002306CB /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E962024177F9C002306CB /* UIStoryboard+Extensions.swift */; };
 		1A1E962824178F63002306CB /* CasesCountryWiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E962724178F63002306CB /* CasesCountryWiseTableViewCell.swift */; };
+		1AC39B8D2417CF5300AA407B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC39B8C2417CF5300AA407B /* MapViewController.swift */; };
+		1AC39B8F2417CF5A00AA407B /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC39B8E2417CF5A00AA407B /* MapViewController.storyboard */; };
+		1AC39B952417D45400AA407B /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC39B932417D45200AA407B /* CustomCalloutView.xib */; };
+		1AC39B962417D45400AA407B /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC39B942417D45400AA407B /* CustomCalloutView.swift */; };
 		6F78CED167F31D4A42F1B4D7 /* Pods_Corona_Tracker_COVID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */; };
 		D8849E4C24179A8F00737863 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8849E4B24179A8F00737863 /* GoogleService-Info.plist */; };
 		D8849E4F24179F1F00737863 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8849E4E24179F1F00737863 /* Attributes.swift */; };
@@ -70,6 +74,10 @@
 		1A1E961E24177F9C002306CB /* UISearchBar+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extensions.swift"; sourceTree = "<group>"; };
 		1A1E962024177F9C002306CB /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		1A1E962724178F63002306CB /* CasesCountryWiseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesCountryWiseTableViewCell.swift; sourceTree = "<group>"; };
+		1AC39B8C2417CF5300AA407B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1AC39B8E2417CF5A00AA407B /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
+		1AC39B932417D45200AA407B /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
+		1AC39B942417D45400AA407B /* CustomCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
 		AEF05D23946FE3752AE1D9FC /* Pods-Corona Tracker COVID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Tracker COVID.release.xcconfig"; path = "Target Support Files/Pods-Corona Tracker COVID/Pods-Corona Tracker COVID.release.xcconfig"; sourceTree = "<group>"; };
 		D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corona_Tracker_COVID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8849E4B24179A8F00737863 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 		1A1E95EC24177BC5002306CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AC39B8B2417CF4100AA407B /* MapViewController */,
 				1A1E95ED24177BCE002306CB /* AppDelegate */,
 				1A1E95EF24177BE4002306CB /* Menu */,
 				1A1E960224177DC1002306CB /* HomeViewController */,
@@ -245,6 +254,25 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1AC39B8B2417CF4100AA407B /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1AC39B922417D44900AA407B /* CalloutView */,
+				1AC39B8C2417CF5300AA407B /* MapViewController.swift */,
+				1AC39B8E2417CF5A00AA407B /* MapViewController.storyboard */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		1AC39B922417D44900AA407B /* CalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				1AC39B942417D45400AA407B /* CustomCalloutView.swift */,
+				1AC39B932417D45200AA407B /* CustomCalloutView.xib */,
+			);
+			path = CalloutView;
+			sourceTree = "<group>";
+		};
 		40AF5BCCFCD5E8631AFB5B17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +374,7 @@
 				1A1E961224177E21002306CB /* NewsViewController.storyboard in Resources */,
 				D8849E4C24179A8F00737863 /* GoogleService-Info.plist in Resources */,
 				1A1E961624177E2E002306CB /* TipsViewController.storyboard in Resources */,
+				1AC39B952417D45400AA407B /* CustomCalloutView.xib in Resources */,
 				1A1E95E5241776F5002306CB /* LaunchScreen.storyboard in Resources */,
 				1A1E95FF24177BE4002306CB /* LeftMenuViewController.storyboard in Resources */,
 				1A1E95E2241776F5002306CB /* Assets.xcassets in Resources */,
@@ -353,6 +382,7 @@
 				1A1E95DD241776F1002306CB /* Main.storyboard in Resources */,
 				1A1E961824177E34002306CB /* CaseByCountryViewController.storyboard in Resources */,
 				1A0852A02417A40B00997287 /* tips.pdf in Resources */,
+				1AC39B8F2417CF5A00AA407B /* MapViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,12 +444,14 @@
 				1A1E962424177F9C002306CB /* UISearchBar+Extensions.swift in Sources */,
 				1A1E960724177DE3002306CB /* CaseByCountryViewController.swift in Sources */,
 				1A1E962624177F9C002306CB /* UIStoryboard+Extensions.swift in Sources */,
+				1AC39B962417D45400AA407B /* CustomCalloutView.swift in Sources */,
 				1A1E960A24177DF2002306CB /* TipsViewController.swift in Sources */,
 				D8849E562417D36E00737863 /* WebViewViewController.swift in Sources */,
 				1A1E962124177F9C002306CB /* UIViewController+Extensions.swift in Sources */,
 				1A0852A42417AA5900997287 /* MenuTableViewCell.swift in Sources */,
 				D8849E512417CE3600737863 /* NewsModel.swift in Sources */,
 				1A1E95E0241776F1002306CB /* Corona_Tracker_COVID.xcdatamodeld in Sources */,
+				1AC39B8D2417CF5300AA407B /* MapViewController.swift in Sources */,
 				1A1E960024177BE4002306CB /* LeftMenuViewController.swift in Sources */,
 				1A1E962324177F9C002306CB /* UIColor+Extensions.swift in Sources */,
 				D8849E532417D10200737863 /* VaccineModel.swift in Sources */,

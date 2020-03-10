@@ -44,7 +44,23 @@ class CaseByCountryViewController: UIViewController {
         }
         definesPresentationContext = true
         
-        self.getData()
+        if let attributes = self.getSavedData(for: "Attributes") {
+            self.arrCountryData = attributes
+            self.arrCountryFilterData = attributes
+        } else {
+            self.getData()
+        }
+    }
+    
+    // Get EVObject from PrefManager
+    func getSavedData(for key: String) -> [Attributes]? {
+        
+        if let placeData = UserDefaults.standard.data(forKey: key) {
+            let placeArray = try! JSONDecoder().decode([Attributes].self, from: placeData)
+            return placeArray
+        } else {
+            return nil
+        }
     }
     
     func getData() {
@@ -123,5 +139,14 @@ extension CaseByCountryViewController: UITableViewDataSource, UITableViewDelegat
         cell.labelTotalRecovered.text = "\(self.arrCountryFilterData[indexPath.row].recovered ?? 0)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let viewController: MapViewController = MapViewController
+            .storyboardInstance
+            .instantiate()
+        viewController.attribute = self.arrCountryFilterData[indexPath.row]
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
 }
