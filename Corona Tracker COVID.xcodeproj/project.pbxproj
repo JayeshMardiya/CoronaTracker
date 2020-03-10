@@ -111,13 +111,13 @@
 		1A1E95EC24177BC5002306CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1A1E960E24177E0E002306CB /* NewsViewController */,
-				1A1E960B24177DFD002306CB /* VaccineViewController */,
-				1A1E960824177DE6002306CB /* TipsViewController */,
-				1A1E960524177DD1002306CB /* CaseByCountryViewController */,
-				1A1E960224177DC1002306CB /* HomeViewController */,
 				1A1E95ED24177BCE002306CB /* AppDelegate */,
 				1A1E95EF24177BE4002306CB /* Menu */,
+				1A1E960224177DC1002306CB /* HomeViewController */,
+				1A1E960524177DD1002306CB /* CaseByCountryViewController */,
+				1A1E960824177DE6002306CB /* TipsViewController */,
+				1A1E960B24177DFD002306CB /* VaccineViewController */,
+				1A1E960E24177E0E002306CB /* NewsViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
