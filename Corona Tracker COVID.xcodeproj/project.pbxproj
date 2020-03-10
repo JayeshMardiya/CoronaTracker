@@ -33,6 +33,8 @@
 		1A1E962624177F9C002306CB /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E962024177F9C002306CB /* UIStoryboard+Extensions.swift */; };
 		1A1E962824178F63002306CB /* CasesCountryWiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E962724178F63002306CB /* CasesCountryWiseTableViewCell.swift */; };
 		6F78CED167F31D4A42F1B4D7 /* Pods_Corona_Tracker_COVID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */; };
+		D8849E4C24179A8F00737863 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8849E4B24179A8F00737863 /* GoogleService-Info.plist */; };
+		D8849E4F24179F1F00737863 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8849E4E24179F1F00737863 /* Attributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		1A1E962724178F63002306CB /* CasesCountryWiseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesCountryWiseTableViewCell.swift; sourceTree = "<group>"; };
 		AEF05D23946FE3752AE1D9FC /* Pods-Corona Tracker COVID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Tracker COVID.release.xcconfig"; path = "Target Support Files/Pods-Corona Tracker COVID/Pods-Corona Tracker COVID.release.xcconfig"; sourceTree = "<group>"; };
 		D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corona_Tracker_COVID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8849E4B24179A8F00737863 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8849E4E24179F1F00737863 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		F5DF9D921214EB633BB08184 /* Pods-Corona Tracker COVID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Tracker COVID.debug.xcconfig"; path = "Target Support Files/Pods-Corona Tracker COVID/Pods-Corona Tracker COVID.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,12 +114,14 @@
 			isa = PBXGroup;
 			children = (
 				1A0852742417A3FB00997287 /* Resources */,
+				D8849E4D24179F1600737863 /* Model */,
 				1A1E961924177F93002306CB /* Helper */,
 				1A1E95EC24177BC5002306CB /* ViewControllers */,
 				1A1E95DB241776F1002306CB /* Main.storyboard */,
 				1A1E95E1241776F5002306CB /* Assets.xcassets */,
 				1A1E95E3241776F5002306CB /* LaunchScreen.storyboard */,
 				1A1E95E6241776F5002306CB /* Info.plist */,
+				D8849E4B24179A8F00737863 /* GoogleService-Info.plist */,
 				1A1E95DE241776F1002306CB /* Corona_Tracker_COVID.xcdatamodeld */,
 			);
 			path = "Corona Tracker COVID";
@@ -244,6 +250,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D8849E4D24179F1600737863 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8849E4E24179F1F00737863 /* Attributes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +320,7 @@
 			files = (
 				1A1E961424177E28002306CB /* VaccineViewController.storyboard in Resources */,
 				1A1E961224177E21002306CB /* NewsViewController.storyboard in Resources */,
+				D8849E4C24179A8F00737863 /* GoogleService-Info.plist in Resources */,
 				1A1E961624177E2E002306CB /* TipsViewController.storyboard in Resources */,
 				1A1E95E5241776F5002306CB /* LaunchScreen.storyboard in Resources */,
 				1A1E95FF24177BE4002306CB /* LeftMenuViewController.storyboard in Resources */,
@@ -366,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1E960D24177E0A002306CB /* VaccineViewController.swift in Sources */,
+				D8849E4F24179F1F00737863 /* Attributes.swift in Sources */,
 				1A1E95D6241776F1002306CB /* AppDelegate.swift in Sources */,
 				1A0852A22417A7A800997287 /* NewsTableViewCell.swift in Sources */,
 				1A1E962224177F9C002306CB /* Log.swift in Sources */,
@@ -533,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Corona-Tracker-COVID";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoronaTrackerCOVID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -553,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Corona-Tracker-COVID";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoronaTrackerCOVID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

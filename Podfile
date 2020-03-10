@@ -6,6 +6,19 @@ target 'Corona Tracker COVID' do
   use_frameworks!
 
   # Pods for Corona Tracker COVID
-pod 'SideMenu'
+  pod 'SideMenu'
+  
+  # Firebase
+  pod 'FirebaseCore'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Database'
+  pod 'Firebase/Analytics'
+  pod 'Toaster',            '2.2.0'
+  pod 'MBProgressHUD', '~> 1.2.0'
+  
+  # Fabric Crashlytics
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end
