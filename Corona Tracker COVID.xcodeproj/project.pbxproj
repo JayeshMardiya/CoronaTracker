@@ -36,6 +36,9 @@
 		1AC39B8F2417CF5A00AA407B /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC39B8E2417CF5A00AA407B /* MapViewController.storyboard */; };
 		1AC39B952417D45400AA407B /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC39B932417D45200AA407B /* CustomCalloutView.xib */; };
 		1AC39B962417D45400AA407B /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC39B942417D45400AA407B /* CustomCalloutView.swift */; };
+		1AC39B992417E0EE00AA407B /* AboutAppViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC39B982417E0EE00AA407B /* AboutAppViewController.storyboard */; };
+		1AC39B9B2417E0F600AA407B /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC39B9A2417E0F600AA407B /* AboutAppViewController.swift */; };
+		1AC39B9D2417E9AC00AA407B /* AboutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC39B9C2417E9AC00AA407B /* AboutData.swift */; };
 		6F78CED167F31D4A42F1B4D7 /* Pods_Corona_Tracker_COVID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */; };
 		D8849E4C24179A8F00737863 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8849E4B24179A8F00737863 /* GoogleService-Info.plist */; };
 		D8849E4F24179F1F00737863 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8849E4E24179F1F00737863 /* Attributes.swift */; };
@@ -78,6 +81,9 @@
 		1AC39B8E2417CF5A00AA407B /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		1AC39B932417D45200AA407B /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
 		1AC39B942417D45400AA407B /* CustomCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
+		1AC39B982417E0EE00AA407B /* AboutAppViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutAppViewController.storyboard; sourceTree = "<group>"; };
+		1AC39B9A2417E0F600AA407B /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		1AC39B9C2417E9AC00AA407B /* AboutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutData.swift; sourceTree = "<group>"; };
 		AEF05D23946FE3752AE1D9FC /* Pods-Corona Tracker COVID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Tracker COVID.release.xcconfig"; path = "Target Support Files/Pods-Corona Tracker COVID/Pods-Corona Tracker COVID.release.xcconfig"; sourceTree = "<group>"; };
 		D5C69CC81572566CCDF52CBE /* Pods_Corona_Tracker_COVID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corona_Tracker_COVID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8849E4B24179A8F00737863 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 		1A1E95EC24177BC5002306CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AC39B972417E0E000AA407B /* AboutAppViewController */,
 				1AC39B8B2417CF4100AA407B /* MapViewController */,
 				1A1E95ED24177BCE002306CB /* AppDelegate */,
 				1A1E95EF24177BE4002306CB /* Menu */,
@@ -273,6 +280,15 @@
 			path = CalloutView;
 			sourceTree = "<group>";
 		};
+		1AC39B972417E0E000AA407B /* AboutAppViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1AC39B9A2417E0F600AA407B /* AboutAppViewController.swift */,
+				1AC39B982417E0EE00AA407B /* AboutAppViewController.storyboard */,
+			);
+			path = AboutAppViewController;
+			sourceTree = "<group>";
+		};
 		40AF5BCCFCD5E8631AFB5B17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +313,7 @@
 				D8849E4E24179F1F00737863 /* Attributes.swift */,
 				D8849E502417CE3600737863 /* NewsModel.swift */,
 				D8849E522417D10200737863 /* VaccineModel.swift */,
+				1AC39B9C2417E9AC00AA407B /* AboutData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1E961424177E28002306CB /* VaccineViewController.storyboard in Resources */,
+				1AC39B992417E0EE00AA407B /* AboutAppViewController.storyboard in Resources */,
 				1A1E961224177E21002306CB /* NewsViewController.storyboard in Resources */,
 				D8849E4C24179A8F00737863 /* GoogleService-Info.plist in Resources */,
 				1A1E961624177E2E002306CB /* TipsViewController.storyboard in Resources */,
@@ -453,10 +471,12 @@
 				1A1E95E0241776F1002306CB /* Corona_Tracker_COVID.xcdatamodeld in Sources */,
 				1AC39B8D2417CF5300AA407B /* MapViewController.swift in Sources */,
 				1A1E960024177BE4002306CB /* LeftMenuViewController.swift in Sources */,
+				1AC39B9B2417E0F600AA407B /* AboutAppViewController.swift in Sources */,
 				1A1E962324177F9C002306CB /* UIColor+Extensions.swift in Sources */,
 				D8849E532417D10200737863 /* VaccineModel.swift in Sources */,
 				1A1E960424177DCD002306CB /* HomeViewController.swift in Sources */,
 				1A1E961024177E1A002306CB /* NewsViewController.swift in Sources */,
+				1AC39B9D2417E9AC00AA407B /* AboutData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

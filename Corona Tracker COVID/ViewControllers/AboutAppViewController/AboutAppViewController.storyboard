@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kbZ-gq-Eay">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About App View Controller-->
+        <scene sceneID="HRn-Sl-o53">
+            <objects>
+                <viewController storyboardIdentifier="AboutAppViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kbZ-gq-Eay" customClass="AboutAppViewController" customModule="Corona_Tracker_COVID" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9pA-RH-d53">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVL-W8-5g9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ErZ-Ps-tCy" firstAttribute="bottom" secondItem="UVL-W8-5g9" secondAttribute="bottom" id="6fN-6w-Smb"/>
+                            <constraint firstItem="UVL-W8-5g9" firstAttribute="leading" secondItem="ErZ-Ps-tCy" secondAttribute="leading" id="Ep3-C6-V15"/>
+                            <constraint firstItem="UVL-W8-5g9" firstAttribute="top" secondItem="ErZ-Ps-tCy" secondAttribute="top" id="Lik-pX-FkB"/>
+                            <constraint firstItem="ErZ-Ps-tCy" firstAttribute="trailing" secondItem="UVL-W8-5g9" secondAttribute="trailing" id="bM2-S7-k9Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ErZ-Ps-tCy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oUO-Y0-tVv">
+                        <barButtonItem key="backBarButtonItem" title=" " id="QWy-vd-qQf"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_menu" id="vdp-mq-OUS">
+                            <connections>
+                                <segue destination="xoM-Mu-Acb" kind="show" id="eoF-EX-FHp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="UVL-W8-5g9" id="wFH-YY-Rmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5x-lK-rk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="61"/>
+        </scene>
+        <!--LeftMenuViewController-->
+        <scene sceneID="vtg-fM-NKb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LeftMenuViewController" id="xoM-Mu-Acb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1cG-PI-PvN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VEI-62-u2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="61"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_menu" width="30" height="30"/>
+    </resources>
+</document>

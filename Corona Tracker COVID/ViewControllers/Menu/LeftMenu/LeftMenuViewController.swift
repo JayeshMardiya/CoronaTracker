@@ -13,7 +13,7 @@ var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
 class LeftMenuViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
-    private let arrayMenuItemTitle: [String] = ["Home", "Cases by Country", "Tips", "News about Vaccine", "News"]
+    private let arrayMenuItemTitle: [String] = ["Home", "Cases by Country", "Tips", "News about Vaccine", "News", "About App"]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -94,6 +94,17 @@ extension LeftMenuViewController: UITableViewDataSource, UITableViewDelegate {
             } else {
                 selectedIndex = indexPath
                 let viewController: NewsViewController = NewsViewController
+                    .storyboardInstance
+                    .instantiate()
+                self.navigationController?.pushViewController(viewController, animated: false)
+            }
+        case 5:
+            print("5")
+            if indexPath == selectedIndex {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                selectedIndex = indexPath
+                let viewController: AboutAppViewController = AboutAppViewController
                     .storyboardInstance
                     .instantiate()
                 self.navigationController?.pushViewController(viewController, animated: false)

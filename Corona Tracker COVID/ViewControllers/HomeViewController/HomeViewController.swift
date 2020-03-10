@@ -160,4 +160,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let viewController: MapViewController = MapViewController
+            .storyboardInstance
+            .instantiate()
+        viewController.attribute = self.attributes[indexPath.row]
+        self.navigationController?.pushViewController(viewController, animated: false)
+    }
 }
