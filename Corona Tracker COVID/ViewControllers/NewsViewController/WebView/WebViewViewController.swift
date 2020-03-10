@@ -14,11 +14,12 @@ class WebViewViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     var urlString: String = ""
+    var titleString: String = ""
     var progressHUD:  MBProgressHUD!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "News"
+        self.title = self.titleString
         
         let url = URL(string: urlString)!
         //webView.navigationDelegate = self

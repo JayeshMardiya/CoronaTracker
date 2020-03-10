@@ -67,6 +67,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             .storyboardInstance
             .instantiate()
         viewController.urlString = self.newsModels[indexPath.row].newURL!
+        viewController.titleString = self.newsModels[indexPath.row].title!
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
